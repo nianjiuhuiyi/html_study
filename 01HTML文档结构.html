@@ -1,0 +1,34 @@
+<!DOCTYPE html>  <!-- ! 表声明的意思，这一行的代码意思：下面的文档标签以html5规范去解析-->
+
+<!--以成对的html作为开头-->
+<html>
+<!--1、头部：以成对的head内的内容作为网页标题-->
+<head>
+    <title>我的第一个网页</title>  <!--这是标题-->
+    <meta charset="utf-8">         <!--不设置编码格式就会乱码-->
+    <meta name="keywords" content="123">   <!--设置一个网站的搜索关键字，都是为了调高被搜索到-->
+    <meta name="description" content="456">   <!--网站的描述内容，填到content中，提高被搜索概率-->
+    <!--meta:元，主要用来完成对应设置-->
+
+    <!--设置网页小图标：快捷写法就是输入 link:favicon 然后tab就行了,然后再把图片的链接放进去-->
+    <link rel="shortcut icon" href="//img.alicdn.com/tps/i3/T1OjaVFl4dXXa.JOZB-114-114.png" type="image/png">
+    <!--type的值，就是后面/png改成图片对应的后缀，原本可能是/x-icon，不改也不影响-->
+
+    <!--设置样式-->
+    <style>
+        /*书写样式的地方；；或者下面添加外部css文件*/
+    </style>
+    <link rel="stylesheet" href="style.css">  <!--这是使用外部css文件-->
+    <!--一样先输入 link:css 再tab，然后把css路径放到href里就行了-->
+
+</head>
+
+<!--2、主体部分-->
+<body>
+    <p>这是一个段落</p>    <!--里面放p这种大量的标签来丰富页面里的内容-->
+</body>
+
+<script>
+    // 放脚本代码的地方，可以没有
+</script>
+</html>
