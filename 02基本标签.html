@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!--代表ie打开就是edge打开-->
     <title>Document</title>
 </head>
+
 <body>
     <!--1、div:用来布局的，没有具体含义，可以看做层-->
     <div>
-        abc
+        abc_hello_world
         <div>这里面是可以嵌套的</div>
     </div>
 
@@ -28,13 +29,14 @@
 
     <!--5、hr:生成一条水平线，主要起装饰作用，也是单标签-->
     <hr />  <!--这就是一条单纯的线，可以在下面加属性-->
-    <hr width="80%" color="red" align="center" height="2px" />
+    <hr width="20%" color="red" align="center" height="2px" />
 
     <!--6、a:实现超链接跳转-->
     <a href="https://baidu.com/" title="这里放提示文字">百度</a>     <!--放www.baidu.com不行-->
     <!--下面是文件的跳转，注意绝对路径和相对路径-->  <!--target中还有_parent和_top暂时用不到-->
     <a href="01HTML文档结构.html" target="_blank">01文档001</a>  <!--这是新开一个网页-->
-    <a href="01HTML文档结构.html" target="_">01文档002</a>   <!--这是在自身网页上打开-->
+    <a href="01HTML文档结构.html" target="_self">01文档002</a>   <!--这是在自身网页上打开-->
+    <!--不给target,默认就是用的_self，本身打开-->
 
     <!--7、img:加载外部图片，参数：src:所需加载图像的路径；alt:图像加载不成功或是图像不存在时就是显示这个内容，否则不显示；title:鼠标放在图标上时的提示内容-->
     <img src="https://img.alicdn.com/imgextra/i2/113880495/O1CN01qcg7wt1FWkiH6KxKj_!!0-saturn_solar.jpg_468x468q75.jpg_.webp" alt="图片" title="提示内容" />
@@ -59,10 +61,6 @@
         <li>这是有序列表1</li>
         <li>这是有序列表2</li>
     </ol>
-
 </body>
-</html>
 
-<!--
-只是我了我的练习，别无它用，！
--->
+</html>
