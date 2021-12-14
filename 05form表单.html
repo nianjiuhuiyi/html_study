@@ -1,10 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单form学习</title>
 </head>
 <body>
-$END$
+    <form action="">
+        <!--  1.text  -->
+        <input type="text" name="phone" placeholder="输入电话" value="135" disabled />
+        <input type="text" name="phone" value="4199" readonly="readonly" />
+        <input type="text" name="phone" placeholder="输入电话" maxlength="5" /> <br/>
+
+        <!--  2.radio：单选钮  -->
+        <input type="radio" name="sex" checked="checked"/>男
+        <input type="radio" name="sex" />女  <!-- 这组的name-->
+
+        <input type="radio" name="num" />1
+        <input type="radio" name="num" checked />2
+        <input type="radio" name="num" />3 <br/>
+
+        <!-- 3. checkbox:多选  -->
+        <input type="checkbox" name="hobby" checked />music
+        <input type="checkbox" name="hobby" />sport
+        <input type="checkbox" name="hobby" checked="checked" />travel
+    </form>
 </body>
 </html>
