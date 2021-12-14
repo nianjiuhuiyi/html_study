@@ -8,6 +8,7 @@
     <title>表单form学习</title>
 </head>
 <body>
+
     <form action="">
         <!--  1.text  -->
         <input type="text" name="phone" placeholder="输入电话" value="135" disabled />
@@ -25,7 +26,57 @@
         <!-- 3. checkbox:多选  -->
         <input type="checkbox" name="hobby" checked />music
         <input type="checkbox" name="hobby" />sport
-        <input type="checkbox" name="hobby" checked="checked" />travel
+        <input type="checkbox" name="hobby" checked="checked" />travel  <br />
+
+        <!-- 4.file 文件上传-->
+        <input type="file">    <br />
+
+        <!-- 5.button  普通按钮，通常用它去调用脚本代码      -->
+        <input type="button" value="登录" disabled>  <br />
+
+        <!--  6.image  图片按钮，用一张图做按钮，用法与button基本一样      -->
+        <input type="image" src="img/1.png" title="刷新">   <br />
+
+        <!--  -->
+        <!-- 7.submit  提交按钮 -->
+        <input type="submit" value="提交">  <br />
+
+        <!-- 8.reset 重置 -->
+        <input type="reset" value="取消">  <br />
+
+        <!-- textarea类 -->
+
+        <textarea name="a_demo" id="a_random" cols="30" rows="10" placeholder="这里放提示内容"></textarea>
+        <br />
+
+        <!-- select类 -->
+        <!-- 单选 -->
+        <label for="sex">选择性别：</label>
+        <select name="a_sel" id="sex">
+            <option value="male">男</option>
+            <option value="female">女</option>
+            <option value="secret">保密</option>
+        </select>
+        <br />
+        <!-- 多选，关键是multiple，也可写作multiple="multiple" -->
+
+        <label for="cate">请选择科目：</label>
+        <select name="mul_sle" id="cate" size="3">
+            <option value="语文">语文</option>
+            <option value="数学">数学</option>
+            <option value="英语">英语</option>
+            <option value="计算机">计算机</option>
+            <option value="其它">其它</option>
+        </select>
+
     </form>
+
+    <button id="a_signal">确认</button>
+    <form action="demo.py">
+        <input type="text" name="my_info">
+        <button>提交</button>  <!--这里的button功能与input中的submit按钮功能一样-->
+    </form>
+
+
 </body>
 </html>

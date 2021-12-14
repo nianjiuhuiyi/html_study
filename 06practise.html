@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practise</title>
+</head>
+<body>
+    <div style="width:300px; height:50px"><b>表单信息</b></div>
+    <form action="">
+        <div style="height:40px">
+            <label for="acc">账号：</label>
+            <input type="text" name="account" id="acc" placeholder="请输入账号：">
+        </div>
+        <div style="height:40px">
+            <label for="mail">邮箱：</label>
+            <input type="text" name="mail" id="mail" placeholder="请输入邮箱：">
+        </div>
+        <div style="height:40px">
+            <label for="password">密码：</label>
+            <input type="password" name="password" id="password" placeholder="请输入密码：">
+        </div>
+        <div style="height:40px">
+            <label for="">性别：</label>
+            <input type="radio" name="sex" checked>男
+            <input type="radio" name="sex">女
+        </div>
+        <div style="height:40px">
+            <label for="">技能：</label>
+            <input type="checkbox" name="skill">html+css
+            <input type="checkbox" name="skill">js
+            <input type="checkbox" name="skill">php
+            <input type="checkbox" name="skill">java
+        </div>
+        <div style="height:40px">
+            <label for="">头像：</label>
+            <input type="file">
+        </div>
+        <div style="height:40px">
+            <label for="pro">现居地：</label>
+            <select name="pro" id="pro">
+                <option value="gd">广东省</option>
+                <option value="sc">四川省</option>
+            </select>
+            <select name="city" id="city">
+                <option value="gz">广州市</option>
+                <option value="cd">成都市</option>
+            </select>
+            <select name="qu" id="qu">
+                <option value="th">天河区</option>
+                <option value="jj">锦江区</option>
+            </select>
+        </div>
+        <div>
+            <label for="mess">留言：</label>
+            <textarea name="mess" id="mess" cols="30" rows="10" placeholder="请输入留言内容"></textarea>
+        </div>
+    </form>
+</body>
+</html>
