@@ -1,0 +1,5 @@
+.my_box {   /* 前面的点是固定写法，my_box可以是任意的*/
+    font-weight: bold;  /*加粗*/
+    font-size: 20px;
+    color: darkorange;
+}

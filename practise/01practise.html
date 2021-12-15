@@ -6,6 +6,8 @@
 </head>
 <body>
     <div style="width:300px; height:50px"><b>表单信息</b></div>
+    <h1>表单信息</h1>
+    <h2>表单信息</h2>
     <form action="">
         <div style="height:40px">
             <label for="acc">账号：</label>
@@ -13,33 +15,34 @@
         </div>
         <div style="height:40px">
             <label for="mail">邮箱：</label>
-            <input type="text" name="mail" id="mail" placeholder="请输入邮箱：">
+<!--            <input type="text" name="mail" id="mail" placeholder="请输入邮箱：">-->
+            <input type="email" name="mail" id="mail" placeholder="请输入邮箱：">
         </div>
         <div style="height:40px">
             <label for="password">密码：</label>
             <input type="password" name="password" id="password" placeholder="请输入密码：">
         </div>
         <div style="height:40px">
-            <label for="">性别：</label>
+            <label>性别：</label>
             <input type="radio" name="sex" checked>男
             <input type="radio" name="sex">女
         </div>
         <div style="height:40px">
-            <label for="">技能：</label>
+            <label>技能：</label>
             <input type="checkbox" name="skill">html+css
             <input type="checkbox" name="skill">js
             <input type="checkbox" name="skill">php
             <input type="checkbox" name="skill">java
         </div>
         <div style="height:40px">
-            <label for="">头像：</label>
+            <label>头像：</label>
             <input type="file">
         </div>
         <div style="height:40px">
             <label for="pro">现居地：</label>
             <select name="pro" id="pro">
                 <option value="gd">广东省</option>
-                <option value="sc">四川省</option>
+                <option value="sc" selected>四川省</option>
             </select>
             <select name="city" id="city">
                 <option value="gz">广州市</option>
@@ -50,10 +53,20 @@
                 <option value="jj">锦江区</option>
             </select>
         </div>
-        <div>
-            <label for="mess">留言：</label>
+        <div >
+            <!--label的留言在框框的左下角，而span在框框的左上角，这样设置后-->
+            <!--<label for="mess">留言：</label>-->
+            <span style="vertical-align:top">留言：</span>
             <textarea name="mess" id="mess" cols="30" rows="10" placeholder="请输入留言内容"></textarea>
         </div>
+        <div style="height:40px">
+            <label for="ver">验证码：</label>
+            <input type="text" id="ver" placeholder="请输入验证码">
+            <!--<img src="../img/ver.png" alt="验证码" >-->   <!--我这里验证码太大，放进去就变形了-->
+        </div>
+        <!--<button>提交</button>-->  <!--我用的这，视频用的下面这个-->
+        <input type="submit" value="提交">&nbsp;&nbsp;<input type="reset" value="重置">
     </form>
+
 </body>
 </html>

@@ -1,0 +1,5 @@
+span {
+    font-size: 15px;
+    color: rgba(108, 141, 23, 0.66);
+    display: block;  /*这样就把行元素转成块元素了，就会自动换行了，原来是不会的*/
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS学习</title>
+    <!--2.内部样式表，，一般都是定义放在head中 -->
+    <style>
+        @import "my_style/02css.css";   /* 千万别忘了分号结尾*/
+        p {
+            background-color: #eeeeee;
+            font-size: 18px;
+            font-style: italic;  /*代表字体倾斜*/
+        }
+    </style>
+
+    <!-- 3.引入外部样式文件 -->
+    <!-- Emmet语法： link:css 然后在按tab，就会快速补充 -->
+    <link rel="stylesheet" href="my_style/01css.css">
+
+</head>
+<body>
+    <!--1.行间样式-->
+    <div style="color: olive; width: 100px; border: 1px solid orange">行间样式演示</div>
+    <div>行间样式演示</div>
+
+    <p>这是内部样式</p>
+    <p>这是内部样式</p>  <!--p标签都会是一样的效果-->
+
+    <span>这是引入外部样式文件</span>
+    <span>这是引入外部样式文件</span>
+
+    <!-- 快速写法： .my_box{这是导入外部样式}*3  然后再tab  -->
+    <div class="my_box">这是导入外部样式</div>
+    <div class="my_box">这是导入外部样式</div>
+    <div class="my_box">这是导入外部样式</div>
+    <em>em就倾斜的意思</em>
+    <em class="my_box">em就倾斜的意思</em>
+
+
+
+</body>
+</html>
