@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>   /* 一定要用style包裹 */
+
+        /*!* 1.* 通配所有标签 *!*/
+        /** {*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*!* 2.标签选择器 *!*/
+        /*span {*/
+        /*    display: block;  !*前面讲了，这就当块级元素*!*/
+        /*    margin-right: 20px;*/
+        /*    border: brown;*/
+        /*    color: #2ecaff;*/
+        /*}*/
+
+        /*!* 3.类选择器 *!*/
+        /*.my_sty {*/
+        /*    color: hotpink;*/
+        /*}*/
+
+        /*!* 4.id选择器 *!*/
+        /*#my_id {*/
+        /*    color: olive;*/
+        /*}*/
+
+        /*!* 5.派生选择器 *!*/
+        /*.my_der>li {*/
+        /*    color: coral;*/
+        /*}*/
+
+        /*!* 选择器分组 *!*/
+        /*p, .box, h1 {*/
+        /*    color: darkorange;*/
+        /*}*/
+        /*p {*/
+        /*    background-color: #2ecaff;*/
+        /*    width: 200px;*/
+        /*    color: red;  !* 这再给样色就会把上面覆盖掉 *!*/
+        /*}*/
+
+        /* 样式继承 */
+        div {
+            font-size: 18px;
+            color: orange;
+        }
+        div span {
+            font-size: 12px;
+        }
+
+
+        #content div.main_content h2 {
+            color: red;
+        }
+        #content .main_content h2 {
+            color: blue;
+            /*color: blue!important;*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+<!--    <ul class="my_der">-->
+<!--        <li>这是内容的说001</li>-->
+<!--        <li>这是内容的说002-->
+<!--            <ul>-->
+<!--                <li>注意这子内容的位置</li>-->
+<!--                <li>跟内容002是在一个li里面</li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--        <li>这是内容的说003</li>-->
+<!--        <p>nihaio </p>  &lt;!&ndash; 这个标签放这里可有效果，但是IDE会报“Element p is not allowed here” &ndash;&gt;-->
+<!--    </ul>-->
+
+    <div class="box">样式~~</div>
+    <h1>一级标题</h1>
+    <p>~~样式</p>
+
+    <div>这是一段测试<span>内容</span></div>
+
+
+    <div id="content">
+        <div class="main_content">
+            <h2>什么颜色？</h2> <!--红色的-->
+        </div>
+    </div>
+
+    <h2>这不会有颜色的</h2>
+</body>
+</html>
+
