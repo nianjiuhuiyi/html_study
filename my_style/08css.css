@@ -1,0 +1,13 @@
+.my_p {
+    font-size: 28px;
+    font-family: "JetBrains Mono";
+    font-style: italic;
+    color: #2ecaff;
+    /*line-height: 1.5;*/
+    line-height: 2em;
+    text-decoration: overline underline ;
+    /*text-decoration-color: red;*/
+    text-decoration-color: #ff0000;
+    text-transform: uppercase;
+    text-indent: 2em;
+}
