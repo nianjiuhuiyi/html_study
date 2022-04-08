@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        /* 这就只设置以a头(属性可以是好几个) */
+        input[name^=a] {
+            background-color: red;
+        }
+        input[name$=s] {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="account age123 name456bb">
+        <input type="text" name="account">
+        <input type="text" name="users">
+    </form>
+</body>
+</html>
