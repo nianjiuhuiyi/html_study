@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格样式</title>
+</head>
+<body>
+<!--
+    table+tr*2>td{这里放内容}*3   这是错的，那里不能是+，但是注意+和>的区别
+    table>tr*2>td{这里放内容}*3   tr是行， td是列
+
+  -->
+    <table border="1" width="400" cellspacing="0" cellpadding="1" align="center">
+        <tr>
+            <th>这里放内容</th>    <!-- th就是表头特殊那一行 -->
+            <th>这里放内容</th>
+            <th>这里放内容</th>
+        </tr>
+        <tr>
+            <td>这里放内容</td>
+            <td>这里放内容</td>
+            <td>这里放内容</td>
+        </tr>
+    </table>
+
+<!--
+注意：一般把第一行的tr改成th，这样它就会是表头，与后面的不一样。
+
+表格属性：
+- border：设置表格边框，默认单位是像素；
+- width：设置表格宽度，默认但是像素；
+- align：表格相对出现在页面中的位置，（left(默认)/center/right）；
+- cellspacing：表格最外面的边框跟里面的距离，当不设置为0时，可以明显看到差别；
+- cellpadding：单元格内文本与边框的距离，换种理解，可理解为表格的高度。
+
+-->
+</body>
+</html>
