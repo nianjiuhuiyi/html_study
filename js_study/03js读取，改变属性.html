@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDiv2 = document.getElementById("div2");
+            // html中的class属性一定要写成className
+            oDiv2.className = "box1";     // 这个box1前面一定不能有点啊
+
+            // // 这是一体的
+            // var oDivStyle = "background";
+            // var oDivStyle_value = "rgb(0, 0, 0)";
+            // oDiv2.style[oDivStyle] = oDivStyle_value;
+            // // 这两行的效果就是一样的
+            // // oDiv2.style.background = oDivStyle_value;
+
+            // innerHTML获取内容
+            var my_content = oDiv2.innerHTML;
+            alert(my_content);  // 展示出来
+            // 把整个内容改了
+            oDiv2.innerHTML = '<a href="http://www.baidu.com" id="my_link">百度连接</a>';
+
+        }
+    </script>
+
+    <!-- 写样式 -->
+    <style type="text/css">
+        .box1, .box2 {
+            width: 300px;
+            height: 300px;
+            background: orange;
+        }
+        .box2 {
+            height: 150px;
+            background: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="div1">这是div1</div>
+    <div class="box2" id="div2">这是div2</div>
+
+</body>
+
+</html>
