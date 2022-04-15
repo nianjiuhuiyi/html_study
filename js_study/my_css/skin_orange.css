@@ -1,0 +1,22 @@
+body {
+    background-color: orange;
+}
+/*
+
+box, .box1, .box2 {
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+*/
+/*  不应该上面那么写，都是有 input 这个标签 */
+input {
+    font-size: 30px;
+    border-radius: 15px;
+}
+.box1 {
+    color: orange;
+}
+.box2 {
+    color: hotpink;
+}
