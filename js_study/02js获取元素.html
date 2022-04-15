@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            /*这是赋值属性*/
+            document.getElementById("div1").style.color = "red";
+            document.getElementById("div1").style.fontSize="30px";
+
+            /* 用变量来精简代码 */
+            var oDiv = document.getElementById("div1");
+            oDiv.style.color = "orange";
+            oDiv.style.fontSize = "10px";
+
+            /*读取属性*/
+            var oA = document.getElementById("my_link");
+            var sID = oA.id;
+            alert(sID);   /*读取属性，并弹框展示*/
+            /*写属性*/
+            oA.href = "http://www.baidu.com";
+        }
+    </script>
+
+</head>
+<body>
+    <div id="div1" style="">这是一个div</div>
+    <a href="#" id="my_link">这是一个连接</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body {
+    background-color: hotpink;
+}
+input {
+    font-size: 30px;
+    border-radius: 15px;
+    border: 0;   /* 这就是不要边框那圈黑的 */
+}
+.box1 {
+    color: orange;
+}
+.box2 {
+    color: hotpink;
+}

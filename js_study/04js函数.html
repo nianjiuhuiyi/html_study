@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script type="text/javascript">
+        /* 这就要用这包裹起来了，不然会直接运行到getElementById，就会报错 */
+        window.onload = function() {
+            /* 获取到按钮，然后让其onclick属性等于 要去执行的函数名 */
+            var obtn1 = document.getElementById("btn1");
+            // obtn1.onclick = chText;  /* 注意这里不能有()。不然就直接是函数的执行了 */
+
+            // 改成匿名函数
+            obtn1.onclick = function () {
+                var oDiv1 = document.getElementById("div1");
+                oDiv1.innerHTML = "把显示的数据改了";
+                oDiv1.style.color = "red";
+                oDiv1.style.fontSize = "30px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">这是函数的学习</div>
+    <input type="button" id="btn1" value="点击">
+</body>
+</html>
