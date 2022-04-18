@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // （1）这里得到的就是一个选择集，不是数组，  "li"就是指的<li></li>标签
+            var aLi = document.getElementsByTagName("li");
+            // （2）获取选择集的的元素个数
+            alert(aLi.length);  // 8个，会得到所有的li标签
+
+            // （3）给li标签一个style
+            // 这是错误的，不能这么直接一次性设置，它是一个选择集
+            // aLi.style.backgroundColor = "orange";
+            for (var i = 0; i < aLi.length; ++i) {
+                // 给偶数行上色，但更多的是用 CSS3 完成这种设置
+                if (i % 2 == 0) {
+                    aLi[i].style.backgroundColor = "orange";
+                }
+            }
+
+            // 如果想选中 <ul class="list2"> 中的li，而不是全部的li,那就：
+            // 先通过id拿到这个对象
+            var oUl = document.getElementById("list2");
+            // 再通过这个对象来拿到里面的所有li标签
+            var aLi2 = oUl.getElementsByTagName("li");
+            alert(aLi2.length);
+        }
+    </script>
+</head>
+<body>
+    <ul id="list1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <!-- 快速写法 ul.list2>li*3    ul.list2>li{"123"}*3  这就会把li标签中的值快速填充  -->
+    <ul id="list2">
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+</body>
+</html>

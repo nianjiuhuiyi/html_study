@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //（1）合并操作：+ 可以是int+str,int会当做str处理
+        alert(12 + "hello");
+
+        //（2）parseInt() 将数字字符串转为整数
+        parseInt(12.13);  // 结果会是12
+
+        //（3）parseFloat() 转小数
+        parseFloat(12.13);  // 12.13
+
+        //（4）split() 把一个字符串按给定的分隔符，分割成数组
+        var str04 = "2012-13-14";
+        alert(str04.split("-"));  // 返回值是 [2012, 13, 14]
+        str04.split("");  // 分割符是空字符的话，结果就是 [2, 0, 1, 2, -, 1, 3, -, 1, 4]
+
+        //（5）charAt() 通过索引获取字符串中的某一个字符
+        var num5 = str04.charAt(2);  // 就取str04字符串索引为2的字符
+
+        //（6）indexOf() 查找字符串是否含有某字符，找到就返回匹配开头位置的索引值，没有就返回-1
+        var str06 = "abcdef micro 123as";
+        var num6 = str06.indexOf("mic");  // 7
+        var num6_1 = str06.indexOf("hello");  // 没找到就是返回-1
+
+        //（7）substring()截取子字符串，和c++的用法基本一样
+        var str07 = str06.substring(3, 10);  // 截取3-10，不包括10，"def mic"
+        // 同样，不给第二个参数，就是从第一个位置开始截取完
+
+        //（8）toUpperCase() 字符串转大写
+        var str08 = str06.toUpperCase()
+
+        // （9）toLowerCase() 字符串转小写
+        var str09 = str08.toLowerCase()
+
+        //（10）字符串反转
+        var str = "123abc";
+        var res = str.split("").reverse().join("");
+        // 先转数组，再reverse(),再转成字符串
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

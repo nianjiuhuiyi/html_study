@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        // （1）创建数组var aList01 = new Array(1, 2, 3, 4, 5);  // 有这么个方式，基本你不用了
+        var aList01 = [1, 2, 3, 4, 5];  // 有这么个方式，基本你不用了
+
+        // （2）获取长度
+        alert(aList01.length);  // 5
+
+        // （3）下标操作取值， aList01[2]
+
+        // （4）join()将数组成员统过一个指定符号合并成字符串
+        alert(aList01.join("-"));  //  1-2-3-4-5
+        // 如果给的空字符串， aList01.join(""); 那就是这数组中的所有值拼成一个字符串
+
+        // （5）push()和pop()从数组最后增加或删除成员
+        aList01.push("hello");   // 相当于.append("hello")
+        alert(aList01);
+        aList01.pop();        // 把刚刚新加的"hello"又删除了
+
+        // （6）unshift()和shift()从数组前面增加成员或删除成员
+        aList01.unshift(123);  // 那么aList01[0]的结果就是 123 了
+        aList01.shift();  // 这就是把前面新增的 123 的删除
+
+        // （7）反转数组
+        aList01.reverse();
+        alert(aList01);    // 5,4,3,2,1
+
+        // （8）indexOf() 返回数组中元素第一次出现的索引值(这个思想用来数组去重特别好用)
+        alert(aList01.indexOf(3));  // 结果是2，就是代表3这个数第一次出现的索引
+
+        // （9）splice()在数组中增加或删除成员
+        aList01.splice(2, 1, 7, 6, "hello");
+        // 从第2个元素开始，删除1个元素，然后在此位置上新增 7、8、"hello"这三个元素
+        // 所以第二个参数可以给0，这样就是 insert的功能了：aList01.splice(2, 0, "hello"); 就是单纯的在第二个位置插入一个hello
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
