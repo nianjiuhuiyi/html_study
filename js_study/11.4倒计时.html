@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oDiv = document.getElementById("div1");
+
+            function timeLeft() {
+                // 注意，这是读取的本地时间，是可以修改的，实际开发中是要读取后台服务器的时间，通过ajax读取
+                var now = new Date();
+
+                // 未来时间（离未来的51还有多久）(两个写法一样，注意月份是从0开始，要比实际小1)
+                // var future = new Date(2022, 3, 30, 24, 0, 0);
+                var future = new Date(2022, 4, 1, 0, 0, 0);
+                // 剩下的时间，毫秒要换成秒
+                var lefts = parseInt((future - now) / 1000);
+
+                var day = parseInt(lefts / 86400);
+                var hour = parseInt(lefts % 86400 / 3600);
+                var min = parseInt(lefts % 86400 % 3600 / 60);
+                var sec = lefts % 60;
+                oDiv.innerHTML = "距离2022年4月31日晚24点还剩下：" + day + "天" + hour + "时" + min + "分" + sec + "秒";
+            }
+            timeLeft();
+            setInterval(timeLeft, 1000);
+        }
+    </script>
+    <style type="text/css">
+        .box1 {
+            font: italic small-caps bolder 18px/1.5 微软雅黑;
+            color: hotpink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function myalert() {
+            alert("hello");
+        }
+
+        // // 不管有没有返回值，定时器都是会执行的，给个返回值就只是为了clearTimeout可以获取到它
+        // var st = setTimeout(myalert, 2000);  // 2s后弹窗
+        // clearTimeout(st)  // 加了这句，这就不会弹窗了，定时器没执行，就背着关
+
+        var obj = setInterval(function() {
+            alert("world");
+        }, 5000);  // 每5秒钟弹窗一次
+        clearInterval(obj);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

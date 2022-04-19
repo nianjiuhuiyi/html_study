@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var oDiv = document.getElementById("div1");
+
+            function TimeGo() {
+                var now = new Date();  // 这是系统的方法
+
+                // 获取年份
+                var year = now.getFullYear();
+
+                // 获取月份(注意，月份是0-11，所以要+1)
+                var month = now.getMonth() + 1;
+
+                var iDate = now.getDate();
+
+                // 星几也是从0-6，且0是星期天
+                var week = now.getDay();
+
+                var hour = now.getHours();
+
+                var min = now.getMinutes();
+
+                var sec = now.getSeconds();
+
+                var sTr = "当前时间是：" + year + "年" + month + "月" + iDate + "日" + " 星期" + week + " "
+                    + hour + ":" + min + ":" + sec;
+                oDiv.innerHTML = sTr;
+            }
+            TimeGo();  // 因为定时器要等一秒钟才调用，进来是没东西的，就先调用一次
+            setInterval(TimeGo, 1000);
+        }
+    </script>
+    <style type="text/css">
+        .box1 {
+            font: italic small-caps bolder 18px/1.5 微软雅黑;
+            color: hotpink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="div1"></div>
+</body>
+</html>
