@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oBody = document.getElementById("body1");
+
+            var data = window.location.search;  // 会得到?以及后面的所有字符串
+
+            var num = data.split("=")[1];  // 这个是没有[-1]的写法的
+            var color = "";
+            switch (parseInt(num)) {
+                case 1:
+                    color = "orange";
+                    break;
+                case 2:
+                    color = "hotpink";
+                    break;
+                default:
+                    color = "green";
+            }
+            oBody.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body id="body1">
+    <div>hello</div>
+</body>
+</html>

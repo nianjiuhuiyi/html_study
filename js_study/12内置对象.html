@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oDiv = document.getElementById("btn1");
+            // 这是通过程序的点击跳转（不再是给button标签上加 <a></a> 标签）
+            // oDiv.onclick = function () {
+            //     window.location.href = "http://www.baidu.com";
+            // }
+
+            // 这就是把鼠标移上去就会跳转
+            // 可搭配前面的 document.referrer 使用，先把这存起来
+            // var before_url = document.referrer;  // (1)
+            oDiv.onmouseover = function () {
+                window.location.href = "http://www.baidu.com";
+                // 然后重定向链接时就给前面保存的地址
+                // window.location.href = before_url;  // （1）
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" VALUE="跳转" id="btn1">
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+    <script type="text/javascript">
+        var pi = Math.PI;
+        // 生成指定范围的随机整数数(包括最大最小)
+        var min = 23;
+        var max = 28;
+
+        var arr = [];
+        for (var i = 0; i < 10; ++i) {
+            var num = (max - min) * Math.random() + min;
+            arr.push(Math.round(num));  // 四舍五入，那么 27.5及以上的数就会成为28
+        }
+        console.log(arr);  // 浏览器 F12 的console控制台就可以看到相关数据了
+        console.log(pi);
+
+        // 通过定时器循环打印
+        setInterval(function () {
+            var new_num = Math.round((max - min) * Math.random() + min);
+            // （1）通过console控制台的方式
+            console.log(new_num);
+
+            // （2）改变标题title的方式 (这就会看到页面标题一直在变)
+            document.title = new_num;
+        }, 500)
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
